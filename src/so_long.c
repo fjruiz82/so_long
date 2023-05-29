@@ -19,8 +19,6 @@ int32_t	main(int argc, char **argv)
 	argc_checker(argc);
 	extension_checker(argv[1]);
 	game->map = read_map(argv[1]);
-	ft_printf("aaaaaa\n");
-
 	if (map_checker(game))
 	{
 		game_init(game);
