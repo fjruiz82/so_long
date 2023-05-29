@@ -83,9 +83,15 @@ void				put_hex(unsigned int n, const char key);
 int					hex_len(unsigned int n);
 int					percent_printer(void);
 
-char				*reserve_line(char *reserved);
-char				*save_rest(char *reserved);
-char				*reading_fd(int fd, char *reserved);
+size_t				ft_strlen_gnl(const char *s);
+char	*ft_substr_gnl(char const *s,
+								unsigned int start,
+								size_t len);
+char				*ft_strjoin_gnl(char const *s1, char const *s2);
+char				*get_until(char **buffer, int until);
+char				*read_line(int fd, char **buffer);
 char				*get_next_line(int fd);
+char				*read_find(int fd, char **buffer, char *buf_read,
+						size_t *by_read);
 
 #endif
