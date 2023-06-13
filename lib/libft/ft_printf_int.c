@@ -6,12 +6,12 @@
 /*   By: fruiz-ca <fruiz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 10:49:33 by fruiz-ca          #+#    #+#             */
-/*   Updated: 2022/08/13 15:00:27 by fruiz-ca         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:04:01 by fruiz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 static int	ft_nlen(long n)
 {
 	int	i;
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 		j = j / 10;
 	}
 	return (tmp);
-}
+}*/
 
 int	int_printer(int n)
 {

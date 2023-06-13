@@ -6,7 +6,7 @@
 /*   By: fruiz-ca <fruiz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:27:34 by fruiz-ca          #+#    #+#             */
-/*   Updated: 2023/05/27 13:27:44 by fruiz-ca         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:16:51 by fruiz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	**read_map(char *argv)
 {
-    int		fd;
+	int		fd;
 	char	*line;
 	char	*holder_map;
 	char	*holder;

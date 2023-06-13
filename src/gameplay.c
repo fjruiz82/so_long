@@ -6,7 +6,7 @@
 /*   By: fruiz-ca <fruiz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:22:34 by fruiz-ca          #+#    #+#             */
-/*   Updated: 2023/05/27 13:22:51 by fruiz-ca         ###   ########.fr       */
+/*   Updated: 2023/06/13 14:27:35 by fruiz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	pushing_w(t_game *game)
 {
+	game->direction = 'w';
 	game->y_player--;
 	if (game->map[game->y_player][game->x_player] == 'E' && game->n_collect == 0)
 	{
@@ -37,6 +38,7 @@ void	pushing_w(t_game *game)
 
 void	pushing_s(t_game *game)
 {
+	game->direction = 's';
 	game->y_player++;
 	if (game->map[game->y_player][game->x_player] == 'E' && game->n_collect == 0)
 	{
@@ -60,6 +62,7 @@ void	pushing_s(t_game *game)
 
 void	pushing_d(t_game *game)
 {
+	game->direction = 'd';
 	game->x_player += 1;
 	if (game->map[game->y_player][game->x_player] == 'E' && game->n_collect == 0)
 	{
@@ -83,6 +86,7 @@ void	pushing_d(t_game *game)
 
 void	pushing_a(t_game *game)
 {
+	game->direction = 'a';
 	game->x_player -= 1;
 	if (game->map[game->y_player][game->x_player] == 'E' && game->n_collect == 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: fruiz-ca <fruiz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:21:55 by fruiz-ca          #+#    #+#             */
-/*   Updated: 2023/05/27 13:38:40 by fruiz-ca         ###   ########.fr       */
+/*   Updated: 2023/06/13 14:45:08 by fruiz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,12 @@ int	exit_game_win(t_game *game)
 	free_map(game->map);
 	mlx_delete_image(game->mlx, game->img_backg);
 	mlx_delete_image(game->mlx, game->img_wall);
-	mlx_delete_image(game->mlx, game->img_player);
+	mlx_delete_image(game->mlx, game->img_player_a);
+	mlx_delete_image(game->mlx, game->img_player_s);
+	mlx_delete_image(game->mlx, game->img_player_w);
+	mlx_delete_image(game->mlx, game->img_player_d);
 	mlx_delete_image(game->mlx, game->img_collect);
 	mlx_delete_image(game->mlx, game->img_exit);
-	//mlx_terminate;
 	mlx_close_window(game->mlx);
 	return (0);
 }
@@ -50,11 +52,12 @@ int	exit_game(t_game *game)
 	free_map(game->map);
 	mlx_delete_image(game->mlx, game->img_backg);
 	mlx_delete_image(game->mlx, game->img_wall);
-	mlx_delete_image(game->mlx, game->img_player);
+	mlx_delete_image(game->mlx, game->img_player_a);
+	mlx_delete_image(game->mlx, game->img_player_s);
+	mlx_delete_image(game->mlx, game->img_player_w);
+	mlx_delete_image(game->mlx, game->img_player_d);
 	mlx_delete_image(game->mlx, game->img_collect);
 	mlx_delete_image(game->mlx, game->img_exit);
-	//free(game->mlx); no sería necesario si uso mlx_terminate, verdad???
-	//mlx_terminate;
 	mlx_close_window(game->mlx);
 	return (0);
 }
