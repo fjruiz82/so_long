@@ -6,7 +6,7 @@
 /*   By: fruiz-ca <fruiz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 14:53:31 by fruiz-ca          #+#    #+#             */
-/*   Updated: 2023/06/13 14:09:54 by fruiz-ca         ###   ########.fr       */
+/*   Updated: 2023/06/13 15:52:21 by fruiz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	map_size(t_game *game)
 
 void	flood_fill(t_game *game, int x, int y)
 {
-	if (x < 0 || y < 0 || x >= game->map_w || y >= game->map_h || game->map_cpy[y][x] == '1' || game->map_cpy[y][x] == 'X')
+	if (x < 0 || y < 0 || x >= game->map_w || y >= game->map_h
+		|| game->map_cpy[y][x] == '1' || game->map_cpy[y][x] == 'X')
 		return ;
 	game->map_cpy[y][x] = 'X';
 	flood_fill(game, x, y - 1);
@@ -68,7 +69,8 @@ int	must_path(t_game *game)
 		x = 0;
 		while (game->map_cpy[y][x])
 		{
-			if (game->map_cpy[y][x] == 'C' || game->map_cpy[y][x] == 'P' || game->map_cpy[y][x] == 'E')
+			if (game->map_cpy[y][x] == 'C' || game->map_cpy[y][x] == 'P'
+				|| game->map_cpy[y][x] == 'E')
 				return (1);
 			x++;
 		}

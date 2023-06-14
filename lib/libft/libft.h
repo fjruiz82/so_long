@@ -6,7 +6,7 @@
 /*   By: fruiz-ca <fruiz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 11:15:24 by fruiz-ca          #+#    #+#             */
-/*   Updated: 2023/05/30 11:27:35 by fruiz-ca         ###   ########.fr       */
+/*   Updated: 2023/06/13 16:04:25 by fruiz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -61,7 +61,7 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *haystack, const char *needle,
-					size_t len);
+						size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -84,13 +84,12 @@ int					hex_len(unsigned int n);
 int					percent_printer(void);
 
 size_t				ft_strlen_gnl(const char *s);
-char	*ft_substr_gnl(char const *s,
-					unsigned int start,
-					size_t len);
+char				*ft_substr_gnl(char const *s, unsigned int start,
+						size_t len);
 char				*ft_strjoin_gnl(char const *s1, char const *s2);
 char				*get_until(char **buffer, int until);
 char				*read_line(int fd, char **buffer);
 char				*get_next_line(int fd);
 char				*read_find(int fd, char **buffer, char *buf_read,
-					size_t *by_read);
+						size_t *by_read);
 #endif
